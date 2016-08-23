@@ -37,6 +37,6 @@ class User < ApplicationRecord
 
   private
   def set_email
-    self.email = "#{self.first_name}#{rand(99999)}@#{self.last_name}.com"
+    self.email = "#{self.first_name.downcase}#{rand(99999)}@#{self.last_name.downcase}.com"
   end
 end
