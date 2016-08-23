@@ -34,9 +34,9 @@ class User < ApplicationRecord
   def email_required?
     false
   end
+
   private
   def set_email
-    "#{self.first_name}#{rand(99999)}@#{self.last_name}.com"
+    self.email = "#{self.first_name}#{rand(99999)}@#{self.last_name}.com"
   end
-  private
 end
